@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>srver55.ps//</title>
+  <title>srver55.ps</title>
   <script>
     async function initWtjpp() {
       try {
-        const response = await fetch('data/sites.json');
+        const response = await fetch('data/server.json');
         const sites = await response.json();
         const list = document.getElementById('sites-list');
         
@@ -37,7 +37,7 @@
     <li>Loding...</li>
   </ul>
   <footer>
-    <p><small>Сеть работает на GitHub Pages. Обновите <code>sites.json</code>, чтобы добавить новые узлы.</small></p>
+    <p><small>Сеть работает на GitHub Pages. Обновите <code>server.json</code>, чтобы добавить новые узлы.</small></p>
   </footer>
 </body>
 </html>
