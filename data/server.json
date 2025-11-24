@@ -1,11 +1,12 @@
 [
   {
     "name": "server no data",
+    "url": "https://example.com",
     "description": "."
   },
   {
     "name": "no data"
-    "url": ".",
+    "url": "https://example.com",
     "description": "no data"
   },
   {
