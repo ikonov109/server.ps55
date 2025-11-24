@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>srver55.ps//</title>
+  <script>
+    async function initWtjpp() {
+      try {
+        const response = await fetch('data/sites.json');
+        const sites = await response.json();
+        const list = document.getElementById('sites-list');
+        
+        sites.forEach(site => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${site.url}" target="_blank">${site.name}</a>: ${site.description}`;
+          list.appendChild(li);
+        });
+      } catch (e) {
+        document.getElementById('sites-list').innerHTML = '<li>❌ Не удалось загрузить базу данных wtjpp</li>';
+      }
+    }
+
+    window.onload = initWtjpp;
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f8; }
+    h1 { color: #333; }
+    ul { list-style: inside; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>server55.ps</h1>
+  <ul id="sites-list">
+    <li>Loding...</li>
+  </ul>
+  <footer>
+    <p><small>Сеть работает на GitHub Pages. Обновите <code>sites.json</code>, чтобы добавить новые узлы.</small></p>
+  </footer>
+</body>
+</html>
